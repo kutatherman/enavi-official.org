@@ -77,7 +77,7 @@
         </div>
     </div>
    <div class="mt-5">
-       tt
+
    </div>
 
     @yield('content')
