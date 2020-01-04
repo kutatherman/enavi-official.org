@@ -8,12 +8,6 @@
 
     <!-- container -->
     <div class="container">
-
-        <ol class="breadcrumb">
-            <li><a href="{{route('index')}}">Home</a></li>
-            <li class="active">Registration</li>
-        </ol>
-
         <div class="row">
 
             <!-- Article main content -->
@@ -26,17 +20,17 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <h3 class="thin text-center">Register a new account</h3>
-                            <p class="text-center text-muted">Vous avez déjà un compte?<a href="signin.blade.php"> Connecter vous</a> </p>
+                            <p class="text-center text-muted">Vous avez déjà un compte?<a href="{{route('signin')}}"> Connecter vous</a> </p>
                             <hr>
 
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
 
                                 <div class="top-margin">
-                                    <label>{{ __('Name') }}</label>
-                                    <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}"  autocomplete="name" autofocus>
+                                    <label>{{ __('Username') }}</label>
+                                    <input type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}"  autocomplete="username" autofocus>
 
-                                    @error('name')
+                                    @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -60,7 +54,7 @@
                                 <div class="row top-margin">
                                     <div class="col-sm-6">
                                         <label>{{ __('Password') }} <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control @error('password') is-invalid @enderror" name="password"  autocomplete="new-password">
+                                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password"  autocomplete="new-password">
 
                                         @error('password')
                                         <span class="invalid-feedback" role="alert">

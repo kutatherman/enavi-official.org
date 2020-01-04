@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:g="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.w3.org/1999/xhtml">
+<html class="h-100" lang="en" xmlns:g="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -46,21 +46,27 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
                     <li class="active"><a href="{{route('index')}}">Home</a></li>
-                    <li><a href="{{route('about')}}">About</a></li>
+                    <li><a href="{{route('dashboard.about')}}">About</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{route('leftSidebar')}}">Left Sidebar</a></li>
-                            <li class="active"><a href="{{route('rightSidebar')}}">Right Sidebar</a></li>
+                            <li><a href="{{route('dashboard.index')}}">Our team</a></li>
+{{--                            <li class="active"><a href="{{route('rightSidebar')}}">Right Sidebar</a></li>--}}
                         </ul>
                     </li>
-                    <li><a href="{{route('contact')}}">Contact</a></li>
+                    <li><a href="{{route('dashboard.contact')}}">Contact</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Authentification<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Option<b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                            @guest()
+
                             <li class="active"><a href="{{route('signin')}}">Se Connecter </a></li>
                             <li class="active"><a href="{{route('register')}}">S'enrégistrer </a></li>
-                            <li><a class="dropdown-item" href="{{ route('logout') }}"
+                            @endguest
+                            @auth()
+                                <li class="active"><a href="{{route('createMember')}}">Add member</a></li>
+                                @endauth
+                                <li><a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
@@ -83,7 +89,7 @@
     @yield('content')
 </head>
 
-<body class="home">
+<body class="home d-flex flex-column h-100">
 <div id="app">
     <!-- Fixed navbar -->
 
@@ -100,12 +106,12 @@
     @include('notify::messages')
 
 
-    <footer id="footer" class="top-space">
+    <footer id="footer" class="top-space ">
 
-    <div class="footer1">
+    <div class="footer1 ">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-sm-3">
                     <ul>
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                             <li>
@@ -117,7 +123,7 @@
                     </ul>
                 </div>
 
-                <div class="col-md-3 widget">
+                <div class="col-sm-3 widget">
                     <h3 class="widget-title">Contact</h3>
                     <div class="widget-body">
                         <p>+237 600 00 00 00<br>
@@ -127,9 +133,10 @@
                         </p>
                     </div>
                 </div>
+                <div class="col-sm-2"></div>
 
-                <div class="col-md-4 col-md-offset-2 widget">
-                    <h3 class="widget-title">Follow me</h3>
+                <div class="col-sm-4  widget">
+                    <h3 class="widget-title">Follow</h3>
                     <div class="widget-body">
                         <p class="follow-me-icons">
                             <a href=""><i class="fa fa-twitter fa-2"></i></a>
@@ -164,7 +171,7 @@
                 <div class="col-md-6 widget">
                     <div class="widget-body">
                         <p class="text-right">
-                            Copyright &copy; 2019, AN.Ayukotang Vision Institute - All right reserve
+                            Copyright &copy; AN.Ayukotang Vision Institute - All right reserve
                         </p>
                     </div>
                 </div>

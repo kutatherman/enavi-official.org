@@ -7,10 +7,6 @@
 	<!-- container -->
 	<div class="container">
 
-		<ol class="breadcrumb">
-			<li><a href="../index.blade.php">Home</a></li>
-			<li class="active">User access</li>
-		</ol>
 
 		<div class="row">
 
@@ -30,10 +26,10 @@
 							<form method="POST" action="{{ route('login') }}">
                                 @csrf
 								<div class="top-margin">
-									<label>{{ __('E-Mail Address') }} <span class="text-danger"> *</span></label>
-									<input type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"  autocomplete="email" autofocus>
+									<label>{{ __('Username') }} <span class="text-danger"> *</span></label>
+									<input type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}"  autocomplete="username" autofocus>
 
-                                    @error('email')
+                                    @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
