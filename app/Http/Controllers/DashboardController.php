@@ -21,6 +21,11 @@ class DashboardController extends Controller
         $teamPosts=Teams::all();
         return view('teamMembers', compact('teamPosts'));
     }
+    public function indexs()
+    {
+        $teamPosts=Teams::all();
+        return view('teamMembers', compact('teamPosts'));
+    }
 
 
     public function create()
@@ -52,45 +57,115 @@ class DashboardController extends Controller
         $data = request()->validate([
             'name' => 'required|string',
             'quality' => 'required|string',
-            'image' => 'required|image',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:10048',
+            'facebook' => 'nullable',
+            'linkedin' => 'nullable',
+            'googleplus' => 'nullable',
+            'twiter' => 'nullable',
+            'emailAddress' => 'nullable',
+            'description' => 'nullable',
         ]);
-
+/*
         $imagePath = request('image')->store('uploads', 'public');
         request()->image->move(public_path('storage/uploads'), $imagePath);
+*/
+        $image = $request->file('image');
+        $input['imagename'] = time().'.'.$image->extension();
+        $destinationPath = public_path('/storage');
+        $img = Image::make($image->path());
+        $img->resize(350, 350, function ($constraint) {
+
+            $constraint->aspectRatio();
+
+        })->save($destinationPath.'/'.$input['imagename']);
 
         $teamPosts = auth()->user()->teams()->create([
-            'name' => $data['name'],
+            'name' => $request->name,
             'quality' => $data['quality'],
-            'image' => $imagePath,
+            'facebook' => $data['facebook'],
+            'linkedin' => $data['linkedin'],
+            'googleplus' => $data['googleplus'],
+            'twiter' => $data['twiter'],
+            'emailAddress' => $data['emailAddress'],
+            'description' => $data['description'] ,
+            'image' => $input['imagename'] ,
         ]);
 
-        smilify('success', 'Welcome to page about');
+        smilify('success', 'Member create successfully');
 
         $teamPosts=Teams::all();
         return view('teamMembers', compact('teamPosts'));
-        //return redirect('home/dashboard');
     }
 
-    public function show( User $user)
+    public function show($id )
     {
-
+        $showTeam = Teams::findOrFail($id);
+        return view('teams.show', compact('showTeam'));
     }
 
 
     public function postEdit($id)
     {
-        return 'form update';
+        $team = Teams::findOrFail($id);
+        return view('teams.edit', compact('team'));
     }
 
 
     public function postUpdate(Request $request, $id)
     {
-        dd( 'form update');
+        $data = request()->validate([
+            'name' => 'required|string',
+            'quality' => 'required|string',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:10048',
+            'facebook' => 'nullable',
+            'linkedin' => 'nullable',
+            'googleplus' => 'nullable',
+            'twiter' => 'nullable',
+            'emailAddress' => 'nullable',
+            'description' => 'nullable',
+        ]);
+        $image = $request->file('image');
+
+        $input['imagename'] = time().'.'.$image->extension();
+
+
+
+        $destinationPath = public_path('/storage');
+
+        $img = Image::make($image->path());
+
+        $img->resize(350, 350, function ($constraint) {
+
+            $constraint->aspectRatio();
+
+        })->save($destinationPath.'/'.$input['imagename']);
+
+
+        $teamPosts = Teams::find($id);
+        $teamPosts->name=$data['name'];
+        $teamPosts->quality=$data['quality'];
+        $teamPosts->facebook=$data['facebook'];
+        $teamPosts->linkedin=$data['linkedin'];
+        $teamPosts->googleplus=$data['googleplus'];
+        $teamPosts->twiter=$data['twiter'];
+        $teamPosts->emailAddress=$data['emailAddress'];
+        $teamPosts->description=$data['description'];
+        if(!empty($request->image)){
+        $imagePath = request('image')->store('uploads', 'public');
+        request()->image->move(public_path('storage/uploads'), $imagePath);
+            $teamPosts->image=$input['imagename'];
+        }
+        $teamPosts->save();
+
+        smilify('success', 'Member modify successfully');
+
+        return redirect()->route('dashboard.index');
     }
 
 
     public function delete($id)
     {
-        return 'form delte';
+        Teams::destroy($id);
+        return back();
     }
 }

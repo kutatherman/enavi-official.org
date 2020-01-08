@@ -19,10 +19,10 @@
                             @if (count($teamPosts) > 0)
                             <div class="team-members row">
                                 @foreach($teamPosts as $team)
-                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                    <div class="col-md-3 ">
                                         <div class="single-member bg-white">
                                             <div class="single-member-header pos-r">
-                                                <img src="{{asset('storage') . '/' . $team->image}}" alt="" class="img-responsive">
+                                                <img src="{{asset('storage') . '/' . $team->image}}" alt="" class="">
                                                 <div class="single-member-overlay overlay t-center">
                                                     <div class="overlay bg-orange alpha-50"></div>
                                                     <ul class="social-icons social-icons--circle list-inline is-inline-block pos-tb-center">
@@ -44,11 +44,12 @@
                                             <div class="single-member-content p-15">
                                                 <h5 class="font-weight">{{$team->name}}</h5>
                                                 <p class="font-weight color-y">{{$team->quality}}</p>
+                                                <p><a href="{{route('dashboard.show', ['team' => $team->id]) }}">More infos</a></p>
                                             </div>
                                             @auth()
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <span><a href="{{route('postUpdate')}}" class=" badge btn-primary">Edit Member</a></span>
-                                                <span><a href="#" class="badge btn-danger">Delete Member</a></span>
+                                                <span><a href="{{route('postEdit', $team->id)}}" class=" badge btn-primary">Edit Member</a></span>
+                                                <span><a href="{{route('postDelete', $team->id )}}" data-method="DELETE" data-confirm="Are you sure ?" class="badge btn-danger">Delete Member</a></span>
                                             </div>
                                                 @endauth
                                         </div>

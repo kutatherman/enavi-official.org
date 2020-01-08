@@ -13,4 +13,9 @@ class Teams extends Model
     {
         return $this->hasMany(User::class)->orderBy('created_at', 'DESC');
     }
+
+    public function getRouteKeyName()
+    {
+        //return 'name';
+    }
 }

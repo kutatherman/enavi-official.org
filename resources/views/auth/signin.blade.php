@@ -11,7 +11,7 @@
 		<div class="row">
 
 			<!-- Article main content -->
-			<article class="col-xs-12 maincontent">
+			<article class="col-md-12 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">Connectez-vous </h1>
 				</header>
@@ -19,8 +19,7 @@
 				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 					<div class="panel panel-default">
 						<div class="panel-body">
-							<h3 class="thin text-center">Connectez-vous à votre compte</h3>
-							<p class="text-center text-muted">Vous n'avez pas de compte? <a href="{{route('register')}}">Enrégistrer vous</a> </p>
+							<h3 class="thin text-center">Remplire les champs pour vous connecter</h3>
 							<hr>
 
 							<form method="POST" action="{{ route('login') }}">
@@ -69,6 +68,7 @@
 				</div>
 
 			</article>
+
 			<!-- /Article -->
 		</div>
 	</div>	<!-- /container -->

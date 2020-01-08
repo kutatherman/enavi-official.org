@@ -2,6 +2,7 @@
 <html class="h-100" lang="en" xmlns:g="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{csrf_token()}}">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
@@ -35,12 +36,12 @@
         .navbar-default{background-color:#1E6EE8;}
     </style>
     <div class="navbar navbar-inverse navbar-default navbar-fixed-top bg-light headroom" >
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <!-- Button for smallest screens -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 <a class="navbar-brand " href="{{route('index')}}"><img src="{{asset('images/Logo.jpg')}}" width="50" alt="{{env('APP_NAME')}}">
-                    <span class="ml-3">AYUKOTANG VISION INSTITUTE </span>
+                    <span class="ml-3">EN.Ayukotang Vision Institute </span>
                 </a>
             </div>
             <div class="navbar-collapse collapse">
@@ -51,21 +52,52 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="{{route('dashboard.index')}}">Our team</a></li>
-{{--                            <li class="active"><a href="{{route('rightSidebar')}}">Right Sidebar</a></li>--}}
+                            <li><a href="{{route('dashboard.contact')}}">Contact</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{route('dashboard.contact')}}">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Donate<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+
+                            <li >
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+
+                                <input type="hidden" name="cmd" value="_s-xclick" />
+
+                                <input type="hidden" name="hosted_button_id" value="M2BPEFRAZF5ZN" />
+
+                                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+
+                                <img alt="" border="0" src="https://www.paypal.com/en_CM/i/scr/pixel.gif" width="1" height="1" />
+
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                <li>
+                                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        {{ $properties['native'] }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Option<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             @guest()
 
                             <li class="active"><a href="{{route('signin')}}">Se Connecter </a></li>
-                            <li class="active"><a href="{{route('register')}}">S'enrégistrer </a></li>
                             @endguest
                             @auth()
-                                <li class="active"><a href="{{route('createMember')}}">Add member</a></li>
+                                    <li class="active"><a href="{{route('register')}}">S'enrégistrer </a></li>
+                                    <li class="active"><a href="{{route('createMember')}}">Add member</a></li>
                                 @endauth
+                                @auth()
                                 <li><a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -76,6 +108,7 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
+                                @endauth
                         </ul>
                     </li>
                 </ul>
@@ -190,6 +223,7 @@
 <script src="{{asset('js/jQuery.headroom.min.js')}}"></script>
 <script src="{{asset('js/template.js')}}"></script>
 <script src="{{asset('js/notify.js')}}"></script>
+<script src="{{asset('js/larails.js')}}"></script>
 
 
 

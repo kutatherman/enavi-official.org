@@ -3,10 +3,11 @@
     <div class="container">
 
         <div class="row">
-            <div class="card">
+            <div class="col-md-2 "></div>
+            <div class="col-md-8 card">
             <form action="{{route('postStore')}}" method="POST" role="form" enctype="multipart/form-data">
                 @csrf
-            	<legend>Create a members</legend>
+            	<legend class="text-center">Create a members</legend>
 
                 <div class="form-group">
                     <label for="">Name <span class="text-danger" >*</span></label>
@@ -57,6 +58,14 @@
                     @enderror
                 </div>
                 <div class="form-group">
+                    <label for="emailAddress">Email address </label>
+                    <input type="text" class="form-control @error('emailAddress') is-invalid @enderror" name="emailAddress" value="{{old('emailAddress')}}">
+
+                    @error('emailAddress')
+                    <span class="invalid-feedback" role="alert">{{$message}}</span>
+                    @enderror
+                </div>
+                <div class="form-group">
                     <div class="custom-file ">
                         <input type="file" name="image" class="custom-file-input @error('image') is-invalid @enderror " id="customFile">
                         <label class="custom-file-label " for="customFile">Choose picture <span class="text-danger" >*</span></label>
@@ -64,6 +73,14 @@
                         <span class="invalid-feedback" role="alert">{{$message}}</span>
                         @enderror
                     </div>
+                </div>
+                <div class="form-group">
+                        <label for="description">Description </label>
+                        <textarea  name="description" id="description" class=" form-control @error('description') is-invalid @enderror "  rows="7" cols="50">{{old('description')}}</textarea>
+
+                        @error('description')
+                        <span class="invalid-feedback" role="alert">{{$message}}</span>
+                        @enderror
                 </div>
             	<div class="text-center "><button type="submit" class="  btn btn-primary">Submit</button></div>
             </form>
