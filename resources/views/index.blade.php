@@ -3,102 +3,62 @@
 @section('content')
 
 	<!-- Header -->
-	<header >
-
-                <div id="my_carousel" class="carousel slide" data-ride="carousel">
-
-                    <!-- Bulles -->
-
-                    <ol class="carousel-indicators">
-                        <li data-target="#my_carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#my_carousel" data-slide-to="1"></li>
-                        <li data-target="#my_carousel" data-slide-to="2"></li>
-                    </ol>
-                    <!-- Slides -->
-                    <div class="carousel-inner">
-                        <!-- Page 1 -->
-                        <div class="item active">
-                            <div class="carousel-page">
-                                <img src="https://source.unsplash.com/RCAhiGJsUUE/1920x1080" class="img-responsive" style="margin:0px auto; height: 100%; width: 100%" />
-                            </div>
-                            <div class="carousel-caption">Page 1 de présentation</div>
-                        </div>
-                        <!-- Page 2 -->
-                        <div class="item">
-                            <div class="carousel-page"><img src="{{asset('images/pic3.jpg')}}" class="img-responsive img-rounded"
-                                                            style="margin:0px auto;"  /></div>
-                            <h2 class="carousel-caption">Page 2 de présentation</h2>
-                        </div>
-                        <!-- Page 3 -->
-                        <div class="item">
-                            <div class="carousel-page">
-                                <img src="{{asset('images/pic2.jpg')}}" class="img-responsive img-rounded"
-                                     style="margin:0px auto;"  />
-                            </div>
-                            <div class="carousel-caption">Page 2 de présentation</div>
-                        </div>
-                    </div>
-
-                    <!-- Contrôles -->
-
-                    <a class="left carousel-control" href="#my_carousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#my_carousel" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
-                </div>
-
-
-
+	<header id="head" >
+        <div class="container">
+            <div class="row">
+                <h1 class="lead">EN.AYUKOTANG VISION INSTITUTE</h1>
+                <p class="tagline">{{ __('messages.slogan') }}</p>
+                <p><a class="btn btn-action btn-lg" role="button" href="{{route('dashboard.about')}}">MORE INFO</a></p>
+            </div>
+        </div>
 	</header>
 	<!-- /Header -->
 
 	<!-- Intro -->
-	<div class="container text-center">
-		<br> <br>
-		<h2 class="thin">{{__('messages.sloganHead')}}</h2>
-		<p class="text-muted">
-			{{ __('messages.sloganSection') }}
-		</p>
-	</div>
+{{--	<div class="container text-center">--}}
+{{--		<br> <br>--}}
+{{--		<h2 class="thin">{{__('messages.sloganHead')}}</h2>--}}
+{{--		<p class="text-muted">--}}
+{{--			{{ __('messages.sloganSection') }}--}}
+{{--		</p>--}}
+{{--	</div>--}}
 	<!-- /Intro-->
 
 	<!-- Highlights - jumbotron -->
-{{--	<div class="jumbotron top-space">--}}
-{{--		<div class="container">--}}
+	<div class="jumbotron top-space">
+		<div class="container">
 
-{{--			<h3 class="text-center thin">Another section here</h3>--}}
+			<h3 class="text-center thin">EN.AYUKOTANG VISION INSTITUTE</h3>
 
-{{--			<div class="row">--}}
-{{--				<div class="col-md-3 col-sm-6 highlight">--}}
-{{--					<div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>some thing here</h4></div>--}}
-{{--					<div class="h-body text-center">--}}
-{{--						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquid adipisci aspernatur. Soluta quisquam dignissimos earum quasi voluptate. Amet, dignissimos, tenetur vitae dolor quam iusto assumenda hic reprehenderit?</p>--}}
-{{--					</div>--}}
-{{--				</div>--}}
-{{--				<div class="col-md-3 col-sm-6 highlight">--}}
-{{--					<div class="h-caption"><h4><i class="fa fa-flash fa-5"></i>Fat-free</h4></div>--}}
-{{--					<div class="h-body text-center">--}}
-{{--						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, commodi, sequi quis ad fugit omnis cumque a libero error nesciunt molestiae repellat quos perferendis numquam quibusdam rerum repellendus laboriosam reprehenderit! </p>--}}
-{{--					</div>--}}
-{{--				</div>--}}
-{{--				<div class="col-md-3 col-sm-6 highlight">--}}
-{{--					<div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>Creative Commons</h4></div>--}}
-{{--					<div class="h-body text-center">--}}
-{{--						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis?</p>--}}
-{{--					</div>--}}
-{{--				</div>--}}
-{{--				<div class="col-md-3 col-sm-6 highlight">--}}
-{{--					<div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>Author's support</h4></div>--}}
-{{--					<div class="h-body text-center">--}}
-{{--						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, excepturi, maiores, dolorem quasi reprehenderit illo accusamus nulla minima repudiandae quas ducimus reiciendis odio sequi atque temporibus facere corporis eos expedita? </p>--}}
-{{--					</div>--}}
-{{--				</div>--}}
-{{--			</div> <!-- /row  -->--}}
+			<div class="row">
+				<div class="col-md-3 col-sm-6 highlight">
+					<div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>some thing here</h4></div>
+					<div class="h-body text-center">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquid adipisci aspernatur. Soluta quisquam dignissimos earum quasi voluptate. Amet, dignissimos, tenetur vitae dolor quam iusto assumenda hic reprehenderit?</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 highlight">
+					<div class="h-caption"><h4><i class="fa fa-flash fa-5"></i>Fat-free</h4></div>
+					<div class="h-body text-center">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, commodi, sequi quis ad fugit omnis cumque a libero error nesciunt molestiae repellat quos perferendis numquam quibusdam rerum repellendus laboriosam reprehenderit! </p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 highlight">
+					<div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>Creative Commons</h4></div>
+					<div class="h-body text-center">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis?</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 highlight">
+					<div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>Author's support</h4></div>
+					<div class="h-body text-center">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, excepturi, maiores, dolorem quasi reprehenderit illo accusamus nulla minima repudiandae quas ducimus reiciendis odio sequi atque temporibus facere corporis eos expedita? </p>
+					</div>
+				</div>
+			</div> <!-- /row  -->
 
-{{--		</div>--}}
-{{--	</div>--}}
+		</div>
+	</div>
 	<!-- /Highlights -->
 
 	<!-- container -->
@@ -132,10 +92,10 @@
 			</div>
 		</div> <!-- /row -->
 
-		<div class="jumbotron top-space">
-			<h4>Dicta, nostrum nemo soluta sapiente sit dolor quae voluptas quidem doloribus recusandae facere magni ullam suscipit sunt atque rerum eaque iusto facilis esse nam veniam incidunt officia perspiciatis at voluptatibus. Libero, aliquid illum possimus numquam fuga.</h4>
-     		<p class="text-right"><a class="btn btn-primary btn-large">Learn more »</a></p>
-  		</div>
+{{--		<div class="jumbotron top-space">--}}
+{{--			<h4>Dicta, nostrum nemo soluta sapiente sit dolor quae voluptas quidem doloribus recusandae facere magni ullam suscipit sunt atque rerum eaque iusto facilis esse nam veniam incidunt officia perspiciatis at voluptatibus. Libero, aliquid illum possimus numquam fuga.</h4>--}}
+{{--     		<p class="text-right"><a class="btn btn-primary btn-large">Learn more »</a></p>--}}
+{{--  		</div>--}}
 
 </div>	<!-- /container -->
 

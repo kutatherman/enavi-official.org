@@ -41,12 +41,12 @@
                 <!-- Button for smallest screens -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 <a class="navbar-brand " href="{{route('index')}}"><img src="{{asset('images/Logo.jpg')}}" width="50" alt="{{env('APP_NAME')}}">
-                    <span class="ml-3">EN.Ayukotang Vision Institute </span>
+                    <span class="ml-3">EN.AVI </span>
                 </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                    <li class="active"><a href="{{route('index')}}">Home</a></li>
+                    <li class=""><a href="{{route('index')}}">Home</a></li>
                     <li><a href="{{route('dashboard.about')}}">About</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
@@ -159,10 +159,14 @@
                 <div class="col-sm-3 widget">
                     <h3 class="widget-title">Contact</h3>
                     <div class="widget-body">
-                        <p>+237 600 00 00 00<br>
-                            <a href="mailto:#">some.email@somewhere.com</a><br>
+                        <p>+237 674 652 651<br>
+                            <a href="mailto:infos@enavi-official.org">infos@enavi-official.org</a><br>
                             <br>
-                            237 Bafoussam
+                            Sens Interdit,Bafoussam,Cameroon.
+
+                         <a class="badge badge-infos" href="http://share.here.com/r/mylocation/e-eyJuYW1lIjoiRS5OLkF5dWtvdGFuZyBWaXNpb24gSW5zdGl0dXRlIFwiZW5hdmlcIiIsImFkZHJlc3MiOiJTZW5zIEludGVyZGl0LEJhZm91c3NhbSxDYW1lcm9vbi4sIEJhZm91c3NhbSIsImxhdGl0dWRlIjo1LjQ3OTMzLCJsb25naXR1ZGUiOjEwLjQxNDY5LCJwcm92aWRlck5hbWUiOiJmYWNlYm9vayIsInByb3ZpZGVySWQiOjEwNDg1MDQ5MTAzMzQ5MX0=?link=directions&fb_locale=fr_FR&ref=facebook&fbclid=IwAR0XC4ThgdOOcweXjJAxnYwz8H3Gjm6YU4B9qUk7sJmOZRIIluQeo2Zcu48" >
+                             Obtenir l’itinéraire
+                         </a>
                         </p>
                     </div>
                 </div>
@@ -172,10 +176,9 @@
                     <h3 class="widget-title">Follow</h3>
                     <div class="widget-body">
                         <p class="follow-me-icons">
-                            <a href=""><i class="fa fa-twitter fa-2"></i></a>
-                            <a href=""><i class="fa fa-dribbble fa-2"></i></a>
-                            <a href=""><i class="fa fa-github fa-2"></i></a>
-                            <a href=""><i class="fa fa-facebook fa-2"></i></a>
+                            <a href="E.N. Ayukotang Vision Institute-ENAVI (@e_enavi) | Twitter"><i class="fa fa-twitter fa-2"></i></a>
+                            <a href="https://www.facebook.com/ENAyukotang-Vision-Institute-enavi-104850491033491/"><i class="fa fa-facebook fa-2"></i></a>
+                            <a href="https://www.linkedin.com/company/e-n-ayukotang-vision-institute"><i class="fa fa-linkedin fa-2"></i></a>
                         </p>
                     </div>
                 </div>
@@ -192,11 +195,10 @@
                 <div class="col-md-6 widget">
                     <div class="widget-body">
                         <p class="simplenav">
-                            <a href="#">Home</a> |
-                            <a href="about.blade.php">About</a> |
-                            <a href="sidebar-right.blade.php">Sidebar</a> |
-                            <a href="contact.blade.php">Contact</a> |
-                            <b><a href="signup.blade.php">Sign up</a></b>
+                            <a href="{{route('index')}}">Home</a> |
+                            <a href="{{route('dashboard.about')}}">About</a> |
+                            <a href="{{route('dashboard.contact')}}">Contact</a> |
+                            <b><a href="{{route('signin')}}">Sign up</a></b>
                         </p>
                     </div>
                 </div>
@@ -204,7 +206,7 @@
                 <div class="col-md-6 widget">
                     <div class="widget-body">
                         <p class="text-right">
-                            Copyright &copy; AN.Ayukotang Vision Institute - All right reserve
+                            Copyright &copy; {{date('Y')}} ENAVI-official . All right reserve
                         </p>
                     </div>
                 </div>

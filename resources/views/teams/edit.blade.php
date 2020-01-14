@@ -83,7 +83,7 @@
                         <span class="invalid-feedback" role="alert">{{$message}}</span>
                         @enderror
                     </div>
-                    <div class="text-center "><button type="submit" class="btn btn-primary">Edit Member</button></div>
+                    <div class="text-center "><button type="submit" class="btn btn-primary btn-block">Edit Member</button></div>
                 </form>
             </div>
         </div>

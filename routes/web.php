@@ -24,15 +24,16 @@ Route::group([
     Route::get('/home', 'HomeController@index')->name('home');
 
     /** Operation route */
-    Route::get('dashboard','DashboardController@index');
     Route::post('dashboard','DashboardController@postStore')->name('postStore');
     Route::get('dashboard/data','DashboardController@getData')->name('getData');
     Route::post('dashboard/delete','DashboardController@postDelete')->name('postDelete');
     Route::get('dashboard/{team}/edit','DashboardController@postEdit')->name('postEdit');
     Route::put('dashboard/{team}','DashboardController@postUpdate')->name('postUpdate');
     Route::delete('dashboard/{team}','DashboardController@delete')->name('postDelete');
+    Route::post('dashboard/contact','DashboardController@contactStore')->name('contactStore');
 
     /** Show routes */
+    Route::get('dashboard','DashboardController@index');
     Route::get('dashboard/about','DashboardController@about')->name('dashboard.about');
     Route::get('dashboard/index','DashboardController@index')->name('dashboard.index');
     Route::get('dashboard/contact','DashboardController@contact')->name('dashboard.contact');

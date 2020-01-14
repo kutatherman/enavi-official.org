@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use App\Teams;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -12,7 +13,7 @@ class DashboardController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except(['index']);
+        $this->middleware('auth')->except(['index', 'about', 'contact', 'contactStore']);
     }
 
 
@@ -44,9 +45,9 @@ class DashboardController extends Controller
     }
 
 
-    public function contactStore(Request $request)
+    public function contactStore(ContactRequest $request)
     {
-        //
+
     }
 
 

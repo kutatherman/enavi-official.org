@@ -19,25 +19,38 @@
 				</header>
 
 				<p>
-					We’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
+					If you having trouble with this service, please <a href="mailto:ayukotang@yahoo.com">ask for help</a>.
 				</p>
 				<br>
-					<form>
+					<form action="{{route('contactStore')}}" method="POST" role="form" novalidate enctype="multipart/form-data">
+                        @csrf
 						<div class="row">
-							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Name">
+							<div class="col-sm-4 {{$errors->has('name') ? 'has-error' : ''}}">
+								<input class="form-control @error('name') is-invalid @enderror" name="name" type="text" required placeholder="Name">
+                                @error('name')
+                                <span class="help-block" role="alert">{{$message}}</span>
+                                @enderror
 							</div>
-							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Email">
+							<div class="col-sm-4 {{$errors->has('email') ? 'has-error' : ''}}">
+								<input class="form-control" name="email" type="text" required placeholder="Email">
+                                @error('email')
+                                <span class="help-block" role="alert">{{$message}}</span>
+                                @enderror
 							</div>
-							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Phone">
+							<div class="col-sm-4 {{$errors->has('phone') ? 'has-error' : ''}}">
+								<input class="form-control" name="phone" type="text" required placeholder="Phone">
+                                @error('phone')
+                                <span class="help-block" role="alert">{{$message}}</span>
+                                @enderror
 							</div>
 						</div>
 						<br>
 						<div class="row">
-							<div class="col-sm-12">
-								<textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
+							<div class="col-sm-12 {{$errors->has('message') ? 'has-error' : ''}}">
+								<textarea placeholder="Type your message here..." required name="message" class="form-control" rows="9"></textarea>
+                                @error('message')
+                                <span class="help-block" role="alert">{{$message}}</span>
+                                @enderror
 							</div>
 						</div>
 						<br>
@@ -56,17 +69,9 @@
 
 			<!-- Sidebar -->
 			<aside class="col-sm-3 sidebar sidebar-right">
-
-				<div class="widget">
-					<h4>Address</h4>
-					<address>
-						2002 Holcombe Boulevard, Houston, TX 77030, USA
-					</address>
-					<h4>Phone:</h4>
-					<address>
-						(713) 791-1414
-					</address>
-				</div>
+                <h3>The good way for you</h3>
+                <br>
+                <img src="{{  asset('images/logoENAVI.jpg')}}" alt="">
 
 			</aside>
 			<!-- /Sidebar -->

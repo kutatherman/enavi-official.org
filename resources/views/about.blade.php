@@ -16,31 +16,48 @@
 				<header class="page-header">
 					<h1 class="page-title">About us</h1>
 				</header>
-				<h3>Lorem ipsum</h3>
-				<p><img src="assets/images/mac.jpg" alt="" class="img-rounded pull-right" width="300" > Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente.</p>
-				<p>Quos, aliquam nam velit impedit minus tenetur beatae voluptas facere sint pariatur! Voluptatibus, quisquam, error, est assumenda corporis inventore illo nesciunt iure aut dolor possimus repellat minima veniam alias eius!</p>
-				<h3>Necessitatibus</h3>
-				<p>Velit, odit, eius, libero unde impedit quaerat dolorem assumenda alias consequuntur optio quae maiores ratione tempore sit aliquid architecto eligendi pariatur ab soluta doloremque dicta aspernatur labore quibusdam dolore corrupti quod inventore. Maiores, repellat, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</p>
-				<h3>Fugit, laboriosam</h3>
-				<p>Eum, quasi, est, vitae, ipsam nobis consectetur ea aspernatur ad eos voluptatibus fugiat nisi perferendis impedit. Quam, nulla, excepturi, voluptate minus illo tenetur sint ab in culpa cumque impedit quibusdam. Saepe, molestias quia voluptatem natus velit fugiat omnis rem eos sapiente quasi quaerat aspernatur quisquam deleniti accusantium laboriosam odio id?</p>
-				<h3>Doloribus, illo ipsum</h3>
-				<p>Velit, odit, eius, libero unde impedit quaerat dolorem assumenda alias consequuntur optio quae maiores ratione tempore sit aliquid architecto eligendi pariatur ab soluta doloremque dicta aspernatur labore quibusdam dolore corrupti quod inventore. Maiores, repellat, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</p>
-				<p>Eum, quasi, est, vitae, ipsam nobis consectetur ea aspernatur ad eos voluptatibus fugiat nisi perferendis impedit. Quam, nulla, excepturi, voluptate minus illo tenetur sint ab in culpa cumque impedit quibusdam. Saepe, molestias quia voluptatem natus velit fugiat omnis rem eos sapiente quasi quaerat aspernatur quisquam deleniti accusantium laboriosam odio id?</p>
+				<h3>Mission</h3>
+				<p><img src="{{asset('images/logoENAVI.jpg')}}" alt="logoENAVI" class="img-rounded pull-right" width="300" > Provide and improve universal eye care and general health with quality, and equity that is accessible and affordable to all in need. Through Evidence-based Comprehensive eye care and health service deliveries, Community outreaches, Research and innovation, Humanitarian developmental activities, Education and Advocacy.</p>
+				<p></p>
+				<h3>Company Description</h3>
+                <p>E.N. Ayukotang Vision Institute (ENAVI) is a nonprofit organisation.
+                    Vision: To have a society that is free from avoidable blindness and ill health.
+                    Mission: Provide and improve universal eye care and general health with quality, and equity that is accessible and affordable to all in need.Through Evidence-based Comprehensive eye care and health service deliveries, Community outreaches, Research and innovation, Humanitarian developmental activities, Education and Advocacy.</p>
+                <p><strong>Core Values: LIFE</strong></p>
+                <ul class="list-unstyled">
+                    <li > 1-Leadership and Legacy</li>
+                    <li> 2-Integrity and Equity</li>
+                    <li> 3-Focused and Result-oriented</li>
+                    <li> 4-Excellence and Evidence-based Services
+                        The organisation has two arms, one in charge of Eye care and General health and the other arm is in charge of Outreaches, Education, and Research.</li>
+                </ul>
 
+
+				<h3>About our organisation</h3>
+				<p>Non-profit organisation for Eye health and General health</p>
+				<h3>Creation date</h3>
+				<p>10th October 2017</p>
+				<h3>Products</h3>
+                <p>Eye Care and General Health services</p>
 			</article>
 			<!-- /Article -->
 
 			<!-- Sidebar -->
-			<aside class="col-sm-4 sidebar sidebar-right">
+			<aside class="col-lg-offset-1 col-sm-3 sidebar sidebar-right">
 
 				<div class="widget">
-					<h4>Vacancies</h4>
+					<h4>Useful address</h4>
 					<ul class="list-unstyled list-spaces">
-						<li><a href="">Lorem ipsum dolor</a><br><span class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, laborum.</span></li>
-						<li><a href="">Totam, libero, quis</a><br><span class="small text-muted">Suscipit veniam debitis sed ipsam quia magnam eveniet perferendis nisi.</span></li>
-						<li><a href="">Enim, sequi dignissimos</a><br><span class="small text-muted">Reprehenderit illum quod unde quo vero ab inventore alias veritatis.</span></li>
-						<li><a href="">Suscipit, consequatur, aut</a><br><span class="small text-muted">Sed, mollitia earum debitis est itaque esse reiciendis amet cupiditate.</span></li>
-						<li><a href="">Nam, illo, veritatis</a><br><span class="small text-muted">Delectus, sapiente illo provident quo aliquam nihil beatae dignissimos itaque.</span></li>
+						<li><a href="mailto:ayukotang@enavi-official.org" class="text-info">ayukotang@enavi-official.org</a><br><span class="small text-muted"></span></li>
+						<li><a href="mailto:infos@enavi-official.org" class="text-info">infos@enavi-official.org</a><br><span class="small text-muted"></span></li>
+						<li><a href="mailto:ceo@enavi-official.org" class="text-info">ceo@enavi-official.org</a><br><span class="small text-muted"></span></li>
+						<li><a href="mailto:secretary@enavi-official.org" class="text-info">secretary@enavi-official.org</a><br><span class="small text-muted"></span></li>
+						<li><a href="mailto:clinic@enavi-official.org" class="text-info">clinic@enavi-official.org</a><br><span class="small text-muted"></span></li>
+						<li><a href="mailto:edu-reseach@enavi-official.org" class="text-info">edu-reseach@enavi-official.org</a><br><span class="small text-muted"></span></li>
+						<li><a href="mailto:staff@enavi-official.org" class="text-info">staff@enavi-official.org</a><br><span class="small text-muted"></span></li>
+						<li><a href="mailto:katty@enavi-official.org" class="text-info">katty@enavi-official.org</a><br><span class="small text-muted"></span></li>
+						<li><a href="mailto:outreach@enavi-official.org" class="text-info">outreach@enavi-official.org</a><br><span class="small text-muted"></span></li>
+						<li><a href="mailto:finance@enavi-official.org" class="text-info">finance@enavi-official.org</a><br><span class="small text-muted"></span></li>
 					</ul>
 				</div>
 
