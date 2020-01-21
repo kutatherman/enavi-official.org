@@ -5,7 +5,7 @@
         <div class="row">
 <div class="col-md-2"></div>
             <div class="col-md-8 card">
-            <form action="{{route('postStore')}}" method="POST" role="form" enctype="multipart/form-data">
+            <form action="{{route('postStore')}}" method="POST" novalidate role="form" enctype="multipart/form-data">
 
                 @csrf
             	<legend class="text-center">Create a members</legend>

@@ -11,6 +11,10 @@
 
     <link rel="shortcut icon" href="{{asset('images/gt_favicon.png')}}">
 
+
+    {{--    Extrat-js--}}
+    @yield('extra-js')
+
     <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
@@ -41,13 +45,14 @@
                 <!-- Button for smallest screens -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 <a class="navbar-brand " href="{{route('index')}}"><img src="{{asset('images/Logo.jpg')}}" width="50" alt="{{env('APP_NAME')}}">
-                    <span class="ml-3">EN.AVI </span>
+                    <span class="ml-3">ENAVI </span>
                 </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
                     <li class=""><a href="{{route('index')}}">Home</a></li>
                     <li><a href="{{route('dashboard.about')}}">About</a></li>
+                    <li><a href="{{route('dashboard.donate')}}">Donate</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -55,25 +60,7 @@
                             <li><a href="{{route('dashboard.contact')}}">Contact</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Donate<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
 
-                            <li >
-                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-
-                                <input type="hidden" name="cmd" value="_s-xclick" />
-
-                                <input type="hidden" name="hosted_button_id" value="M2BPEFRAZF5ZN" />
-
-                                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-
-                                <img alt="" border="0" src="https://www.paypal.com/en_CM/i/scr/pixel.gif" width="1" height="1" />
-
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language<b class="caret"></b></a>
                         <ul class="dropdown-menu">

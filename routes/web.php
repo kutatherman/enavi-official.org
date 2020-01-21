@@ -39,7 +39,10 @@ Route::group([
     Route::get('dashboard/contact','DashboardController@contact')->name('dashboard.contact');
     Route::get('dashboard/createMember','DashboardController@create')->name('createMember');
     Route::get('dashboard/{team}','DashboardController@show')->name('dashboard.show');
+    Route::get('donate','DashboardController@donate')->name('dashboard.donate');
 
+    /** Contact Posts controller */
+    //Route::resource('contactPost', 'ContactPostController');
 
 });
 

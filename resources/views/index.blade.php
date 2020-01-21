@@ -15,13 +15,18 @@
 	<!-- /Header -->
 
 	<!-- Intro -->
-{{--	<div class="container text-center">--}}
-{{--		<br> <br>--}}
-{{--		<h2 class="thin">{{__('messages.sloganHead')}}</h2>--}}
-{{--		<p class="text-muted">--}}
-{{--			{{ __('messages.sloganSection') }}--}}
-{{--		</p>--}}
-{{--	</div>--}}
+	<div class="container ">
+		<br> <br>
+		<h2 class="thin"></h2>
+		<p class="">{!! __('messages.sloganSection1') !!}</p>
+		<p class="">{!! __('messages.sloganSection2') !!}</p>
+		<p class="">{!! __('messages.sloganSection3') !!}</p>
+		<p class="">{!! __('messages.sloganSection4') !!}</p>
+		<p class="">{!! __('messages.sloganSection5') !!}</p>
+		<p class="">{!! __('messages.sloganSection6') !!}</p>
+        <p><strong>Dr.Enowntai Nkongho AYUKOTANG, OD (KNUST-Ghana), MPHEC (LSHTM, London-UK), PhD Student(UKZN-South Africa).</strong></p>
+        <p><strong>CEO of ENAVI-OFFICIAL</strong>/p>
+	</div>
 	<!-- /Intro-->
 
 	<!-- Highlights - jumbotron -->

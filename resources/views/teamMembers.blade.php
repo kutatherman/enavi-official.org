@@ -13,7 +13,6 @@
                         <div class="section-title">
                             <h2 class="font-weight">OUR TEAM</h2>
                             <span class="dots dt-theme margin-bottom-1"></span>
-                            <p class="font-weight">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
                         </div>
                         <div class="our-team-three">
                             @if (count($teamPosts) > 0)

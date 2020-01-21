@@ -12,7 +12,7 @@
 		<div class="row">
 
 			<!-- Article main content -->
-			<article class="col-sm-8 maincontent">
+			<article class="col-md12 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">About us</h1>
 				</header>
@@ -42,27 +42,6 @@
 			</article>
 			<!-- /Article -->
 
-			<!-- Sidebar -->
-			<aside class="col-lg-offset-1 col-sm-3 sidebar sidebar-right">
-
-				<div class="widget">
-					<h4>Useful address</h4>
-					<ul class="list-unstyled list-spaces">
-						<li><a href="mailto:ayukotang@enavi-official.org" class="text-info">ayukotang@enavi-official.org</a><br><span class="small text-muted"></span></li>
-						<li><a href="mailto:infos@enavi-official.org" class="text-info">infos@enavi-official.org</a><br><span class="small text-muted"></span></li>
-						<li><a href="mailto:ceo@enavi-official.org" class="text-info">ceo@enavi-official.org</a><br><span class="small text-muted"></span></li>
-						<li><a href="mailto:secretary@enavi-official.org" class="text-info">secretary@enavi-official.org</a><br><span class="small text-muted"></span></li>
-						<li><a href="mailto:clinic@enavi-official.org" class="text-info">clinic@enavi-official.org</a><br><span class="small text-muted"></span></li>
-						<li><a href="mailto:edu-reseach@enavi-official.org" class="text-info">edu-reseach@enavi-official.org</a><br><span class="small text-muted"></span></li>
-						<li><a href="mailto:staff@enavi-official.org" class="text-info">staff@enavi-official.org</a><br><span class="small text-muted"></span></li>
-						<li><a href="mailto:katty@enavi-official.org" class="text-info">katty@enavi-official.org</a><br><span class="small text-muted"></span></li>
-						<li><a href="mailto:outreach@enavi-official.org" class="text-info">outreach@enavi-official.org</a><br><span class="small text-muted"></span></li>
-						<li><a href="mailto:finance@enavi-official.org" class="text-info">finance@enavi-official.org</a><br><span class="small text-muted"></span></li>
-					</ul>
-				</div>
-
-			</aside>
-			<!-- /Sidebar -->
 
 		</div>
 	</div>	<!-- /container -->

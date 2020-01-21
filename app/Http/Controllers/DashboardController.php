@@ -13,16 +13,11 @@ class DashboardController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except(['index', 'about', 'contact', 'contactStore']);
+        $this->middleware('auth')->except(['index','donate', 'about', 'contact', 'contactStore']);
     }
 
 
     public function index()
-    {
-        $teamPosts=Teams::all();
-        return view('teamMembers', compact('teamPosts'));
-    }
-    public function indexs()
     {
         $teamPosts=Teams::all();
         return view('teamMembers', compact('teamPosts'));
@@ -42,6 +37,11 @@ class DashboardController extends Controller
     public function contact()
     {
         return view('contact');
+    }
+
+    public function donate()
+    {
+        return view('donate');
     }
 
 
@@ -74,7 +74,7 @@ class DashboardController extends Controller
         $input['imagename'] = time().'.'.$image->extension();
         $destinationPath = public_path('/storage');
         $img = Image::make($image->path());
-        $img->resize(350, 350, function ($constraint) {
+        $img->resize(200, 200, function ($constraint) {
 
             $constraint->aspectRatio();
 
