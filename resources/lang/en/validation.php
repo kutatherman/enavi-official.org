@@ -117,7 +117,7 @@ return [
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
-
+    'phone' => ' The :attribute is invalid. Exp: 237690000000',
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -147,6 +147,7 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+    ],
 
 ];

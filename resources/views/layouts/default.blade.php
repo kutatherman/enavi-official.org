@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 
-    <title>{{env('APP_NAME')}} | Ayukotang Vision Institute </title>
+    <title> {{isset($title) ? $title . ' | ' : '' }} {{env('APP_NAME')}}</title>
 
     <link rel="shortcut icon" href="{{asset('images/gt_favicon.png')}}">
 
@@ -50,14 +50,14 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                    <li class=""><a href="{{route('index')}}">Home</a></li>
-                    <li><a href="{{route('dashboard.about')}}">About</a></li>
-                    <li><a href="{{route('dashboard.donate')}}">Donate</a></li>
+                    <li class="{{set_active_route('index')}}"><a href="{{route('index')}}">Home</a></li>
+                    <li class="{{set_active_route('dashboard.about')}}"><a href="{{route('dashboard.about')}}">About</a></li>
+                    <li class="{{set_active_route('dashboard.donate')}}"><a href="{{route('dashboard.donate')}}">Donate</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{route('dashboard.index')}}">Our team</a></li>
-                            <li><a href="{{route('dashboard.contact')}}">Contact</a></li>
+                            <li class="{{set_active_route('dashboard.index')}}"><a href="{{route('dashboard.index')}}">Our team</a></li>
+                            <li class="{{set_active_route('dashboard.contact')}}"><a href="{{route('dashboard.contact')}}">Contact</a></li>
                         </ul>
                     </li>
 

@@ -19,5 +19,6 @@ return [
     'help3' => 'peut aider à acheter de l\'équipement spécialisé pour un centre de vision qui peut fournir des tests de santé oculaire aux communautés dans le besoin.',
     'help4' => 'Sony et Somita, frère et sœur, vivaient déjà dans la pauvreté. Perdre leur vision rendrait la vie beaucoup plus difficile et plus dangereuse pour leur famille. Une mauvaise vision signifiait que les frères et sœurs étaient plus enclins aux accidents et à l\'exploitation.',
     'help5' => 'Avec un don de 28 $ pour financer des tests oculaires et des lunettes, vous pouvez restaurer la vie d\'un enfant comme le Somita de cinq ans du Cambodge.',
+    'msgDashboard' => 'Vous n\'avez pas de message pour le moment',
 
 ];

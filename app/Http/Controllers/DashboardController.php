@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ContactPost;
 use App\Http\Requests\ContactRequest;
 use App\Teams;
 use Illuminate\Http\Request;
@@ -13,7 +14,7 @@ class DashboardController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except(['index','donate', 'about', 'contact', 'contactStore']);
+        $this->middleware('auth')->except(['index','donate', 'about', 'contactCreate', 'contactStore']);
     }
 
 
@@ -34,20 +35,36 @@ class DashboardController extends Controller
         return view('about');
     }
 
-    public function contact()
-    {
-        return view('contact');
-    }
-
     public function donate()
     {
         return view('donate');
     }
 
-
-    public function contactStore(ContactRequest $request)
+    /** Contact message  */
+    public function contactCreate()
     {
+        return view('contact');
+    }
 
+
+    public function contactStore(Request $request)
+    {
+        $this->validate($request, [
+           'name' => 'required|min:3',
+           'email' => 'required|email',
+           'phone' =>  'required|phone:cm',
+            'msg' => 'required|min:10',
+            'g-recaptcha-response' => 'required|captcha'
+        ]);
+        ContactPost::create(['name' => $request->name, 'email' => $request->email, 'phone' => $request->phone, 'msg' => $request->msg]);
+        smilify('success', 'Your message has sent successfully');
+        return back();
+    }
+
+    public function contactIndex()
+    {
+        $posts = ContactPost::all();
+        return view('contactPost.index', compact('posts'));
     }
 
 

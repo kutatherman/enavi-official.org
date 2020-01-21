@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.default', ['title' => 'Contact'])
 @section('extra-js')
     {!! NoCaptcha::renderJs() !!}
 @stop
@@ -25,7 +25,7 @@
 					If you having trouble with this service, please <a href="mailto:ayukotang@yahoo.com">ask for help</a>.
 				</p>
 				<br>
-					<form action="" method="POST" role="form" novalidate enctype="multipart/form-data">
+					<form action="{{route('contactStore')}}" method="POST" role="form" novalidate enctype="multipart/form-data">
                         @csrf
 						<div class="row">
 							<div class="col-sm-4 {{$errors->has('name') ? 'has-error' : ''}}">
@@ -35,13 +35,13 @@
                                 @enderror
 							</div>
 							<div class="col-sm-4 {{$errors->has('email') ? 'has-error' : ''}}">
-								<input class="form-control" name="email" value="{{old('email')}} "type="text" required placeholder="Email">
+								<input class="form-control" name="email" value="{{old('email')}}" type="text" required placeholder="Email">
                                 @error('email')
                                 <span class="help-block" role="alert">{{$message}}</span>
                                 @enderror
 							</div>
 							<div class="col-sm-4 {{$errors->has('phone') ? 'has-error' : ''}}">
-								<input class="form-control" name="phone" value="{{old('phone')}}" type="text" required placeholder="Phone">
+								<input class="form-control" name="phone" value="{{old('phone')}}" type="text" required placeholder="237 600 00 00 00">
                                 @error('phone')
                                 <span class="help-block" role="alert">{{$message}}</span>
                                 @enderror

@@ -19,5 +19,6 @@ return [
     'help3' => 'can help purchase specialist equipment for a vision centre that can provide eye health screenings to communities in need.',
     'help4' => 'Sony and Somita, brother and sister, were already living in poverty. Losing their vision would make life significantly harder and more dangerous for their family. Poor vision meant both the siblings were more prone to accidents and exploitation.',
     'help5' => 'With a gift of $28 to fund eye tests and glasses, you can restore the life of a child like five-year old Somita from Cambodia.',
+    'msgDashboard' => 'You have no message at the moment',
 
 ];

@@ -49,6 +49,18 @@
                                 </li>
                             @endif
                         @else
+                            <li class=" nav-item dropdown">
+                                <a href="#" id="navbarDropdown" class="nav-link dropdown-toggle" data-toggle="dropdown">Language<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                        <li>
+                                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                {{ $properties['native'] }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret">Menu</span>

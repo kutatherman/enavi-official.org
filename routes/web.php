@@ -36,13 +36,14 @@ Route::group([
     Route::get('dashboard','DashboardController@index');
     Route::get('dashboard/about','DashboardController@about')->name('dashboard.about');
     Route::get('dashboard/index','DashboardController@index')->name('dashboard.index');
-    Route::get('dashboard/contact','DashboardController@contact')->name('dashboard.contact');
+    Route::get('dashboard/contact','DashboardController@contactCreate')->name('dashboard.contact');
+    Route::get('dashboard/contact/show','DashboardController@contactIndex')->name('dashboard.contactIndex');
     Route::get('dashboard/createMember','DashboardController@create')->name('createMember');
     Route::get('dashboard/{team}','DashboardController@show')->name('dashboard.show');
     Route::get('donate','DashboardController@donate')->name('dashboard.donate');
 
     /** Contact Posts controller */
-    //Route::resource('contactPost', 'ContactPostController');
+   // Route::resource('contactPost', 'ContactPostController');
 
 });
 
