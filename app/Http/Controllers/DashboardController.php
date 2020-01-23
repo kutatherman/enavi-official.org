@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\ContactPost;
-use App\Http\Requests\ContactRequest;
+use App\Staff;
 use App\Teams;
 use Illuminate\Http\Request;
-use Illuminate\View\View;
 use Intervention\Image\Facades\Image;
 
 class DashboardController extends Controller
@@ -14,9 +13,16 @@ class DashboardController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except(['index','donate', 'about', 'contactCreate', 'contactStore']);
+        $this->middleware('auth')->except([
+            'index','donate',
+            'galleryIndex',
+            'galleryIndex1',
+            'galleryIndex2',
+            'galleryIndex3',
+            'galleryIndex4',
+            'about', 'contactCreate', 'contactStore'
+        ]);
     }
-
 
     public function index()
     {
@@ -24,8 +30,18 @@ class DashboardController extends Controller
         return view('teamMembers', compact('teamPosts'));
     }
 
+    public function indexStaff()
+    {
+        $staffPosts=Staff::all();
+        return view('teamMembers', compact('staffPosts'));
+    }
 
     public function create()
+    {
+        return view('admin.dashboard');
+    }
+
+    public function createStaff()
     {
         return view('admin.dashboard');
     }
@@ -46,13 +62,12 @@ class DashboardController extends Controller
         return view('contact');
     }
 
-
     public function contactStore(Request $request)
     {
         $this->validate($request, [
            'name' => 'required|min:3',
            'email' => 'required|email',
-           'phone' =>  'required|phone:cm',
+           'phone' =>  'nullable|phone:cm',
             'msg' => 'required|min:10',
             'g-recaptcha-response' => 'required|captcha'
         ]);
@@ -66,8 +81,6 @@ class DashboardController extends Controller
         $posts = ContactPost::all();
         return view('contactPost.index', compact('posts'));
     }
-
-
 
     public function postStore(Request $request)
     {
@@ -83,15 +96,12 @@ class DashboardController extends Controller
             'emailAddress' => 'nullable',
             'description' => 'nullable',
         ]);
-/*
-        $imagePath = request('image')->store('uploads', 'public');
-        request()->image->move(public_path('storage/uploads'), $imagePath);
-*/
+
         $image = $request->file('image');
         $input['imagename'] = time().'.'.$image->extension();
         $destinationPath = public_path('/storage');
         $img = Image::make($image->path());
-        $img->resize(200, 200, function ($constraint) {
+        $img->resize(1000, 1000, function ($constraint) {
 
             $constraint->aspectRatio();
 
@@ -115,19 +125,60 @@ class DashboardController extends Controller
         return view('teamMembers', compact('teamPosts'));
     }
 
+    public function staffStore(Request $request)
+    {
+
+        $data = request()->validate([
+            'name' => 'required|string',
+            'quality' => 'required|string',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:10048',
+            'facebook' => 'nullable',
+            'linkedin' => 'nullable',
+            'googleplus' => 'nullable',
+            'twiter' => 'nullable',
+            'emailAddress' => 'nullable',
+            'description' => 'nullable',
+        ]);
+
+        $image = $request->file('image');
+        $input['imagename'] = time().'.'.$image->extension();
+        $destinationPath = public_path('/storage');
+        $img = Image::make($image->path());
+        $img->resize(1000, 1000, function ($constraint) {
+
+            $constraint->aspectRatio();
+
+        })->save($destinationPath.'/'.$input['imagename']);
+
+        $staffPosts = auth()->user()->teams()->create([
+            'name' => $request->name,
+            'quality' => $data['quality'],
+            'facebook' => $data['facebook'],
+            'linkedin' => $data['linkedin'],
+            'googleplus' => $data['googleplus'],
+            'twiter' => $data['twiter'],
+            'emailAddress' => $data['emailAddress'],
+            'description' => $data['description'] ,
+            'image' => $input['imagename'] ,
+        ]);
+
+        smilify('success', 'Member create successfully');
+
+        $staffPosts=Staff::all();
+        return view('teamMembers', compact('staffPosts'));
+    }
+
     public function show($id )
     {
         $showTeam = Teams::findOrFail($id);
         return view('teams.show', compact('showTeam'));
     }
 
-
     public function postEdit($id)
     {
         $team = Teams::findOrFail($id);
         return view('teams.edit', compact('team'));
     }
-
 
     public function postUpdate(Request $request, $id)
     {
@@ -152,7 +203,7 @@ class DashboardController extends Controller
 
         $img = Image::make($image->path());
 
-        $img->resize(350, 350, function ($constraint) {
+        $img->resize(700, 700, function ($constraint) {
 
             $constraint->aspectRatio();
 
@@ -180,10 +231,29 @@ class DashboardController extends Controller
         return redirect()->route('dashboard.index');
     }
 
-
     public function delete($id)
     {
         Teams::destroy($id);
         return back();
     }
+
+/** GALLERY FUNCTION */
+    public function galleryIndex()
+    {
+        return view('gallery.index');
+    }
+    public function galleryIndex1()
+    {
+        return view('gallery.CEO-at-Internation-conferences');
+    }
+
+    public function galleryIndex3()
+    {
+        return view('gallery.ENAVI_CEO_and_Board_Secretary');
+    }
+    public function galleryIndex4()
+    {
+        return view('gallery.ENAVI_CEO_organises_2019_Commonwealth');
+    }
+
 }

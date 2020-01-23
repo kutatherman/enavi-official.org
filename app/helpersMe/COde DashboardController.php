@@ -1,114 +1,166 @@
-<?php
 
-namespace App\Http\Controllers;
+<header id="head" class="secondary"></header>
 
-use App\Teams;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
-use Illuminate\View\View;
-use Intervention\Image\Facades\Image;
-/**
-class DashboardController extends Controller
-{
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+<!-- container -->
 
 
-    public function index()
-    {
-        $teamPosts=Teams::all();
-        return view('teamMembers', compact('teamPosts'));
-    }
+<div class="container">
+    <section id="team" class="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2 class="font-weight">OUR TEAM</h2>
+                        <span class="dots dt-theme margin-bottom-1"></span>
+                        <p class="font-weight">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+                    </div>
+                    <div class="our-team-three">
+                        <div class="team-members row">
+                            <div class="col-md-3 col-sm-6 col-xs-12 card-inner">
+                                <div class="single-member bg-white ">
+                                    <div class="single-member-header pos-r ">
+                                        <img src="{{asset('teams/Delphine.jpg')}}" width="450" height="10" alt="" class="img-responsive">
+                                        <div class="single-member-overlay overlay t-center">
+                                            <div class="overlay bg-orange alpha-50"></div>
+                                            <ul class="social-icons social-icons--circle list-inline is-inline-block pos-tb-center">
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-facebook bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-twitter bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-linkedin bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-google-plus bg-orange"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="single-member-content p-1">
+                                        <h5 class="font-weight">John Weible</h5>
+                                        <p class="font-weight color-y">Owner and Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 card-inner ">
+                                <div class="single-member bg-white">
+                                    <div class="single-member-header pos-r">
+                                        <img src="{{asset('teams/Dr-Enowntai.jpg')}}" width="450" height="10" class="img-responsive" alt="">
+                                        <div class="single-member-overlay overlay t-center">
+                                            <div class="overlay bg-orange alpha-50"></div>
+                                            <ul class="social-icons social-icons--circle list-inline is-inline-block pos-tb-center">
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-facebook bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-twitter bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-linkedin bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-google-plus bg-orange"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="single-member-content p-1">
+                                        <h5 class="font-weight">Scarlett Henderson</h5>
+                                        <p class="font-weight color-y">Owner and Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 card-inner">
+                                <div class="single-member bg-white">
+                                    <div class="single-member-header pos-r">
+                                        <img src="{{asset('teams/IMG-20200115-WA0011.jpg')}}" width="450" height="10" class="img-responsive" alt="">
+                                        <div class="single-member-overlay overlay t-center">
+                                            <div class="overlay bg-orange alpha-50"></div>
+                                            <ul class="social-icons social-icons--circle list-inline is-inline-block pos-tb-center">
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-facebook bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-twitter bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-linkedin bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-google-plus bg-orange"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="single-member-content p-1">
+                                        <h5 class="font-weight">Nicholas Kelly</h5>
+                                        <p class="font-weight color-y">Owner and Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 card-inner">
+                                <div class="single-member bg-white">
+                                    <div class="single-member-header pos-r">
+                                        <img src="{{asset('teams/IMG-20200115-WA0012.jpg')}}" width="450" height="10" class="img-responsive" alt="">
+                                        <div class="single-member-overlay overlay t-center">
+                                            <div class="overlay bg-orange alpha-50"></div>
+                                            <ul class="social-icons social-icons--circle list-inline is-inline-block pos-tb-center">
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-facebook bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-twitter bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-linkedin bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-google-plus bg-orange"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="single-member-content p-1">
+                                        <h5 class="font-weight">Robert Coleman</h5>
+                                        <p class="font-weight color-y">Owner and Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 card-inner">
+                                <div class="single-member bg-white">
+                                    <div class="single-member-header pos-r">
+                                        <img src="{{asset('teams/20190721_194533.jpg')}}" width="450" height="10" alt="" class="img-responsive">
+                                        <div class="single-member-overlay overlay t-center">
+                                            <div class="overlay bg-orange alpha-50"></div>
+                                            <ul class="social-icons social-icons--circle list-inline is-inline-block pos-tb-center">
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-facebook bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-twitter bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-linkedin bg-orange"></i></a>
+                                                </li>
+                                                <li class="social-icons__item">
+                                                    <a href="#"><i class="fa fa-google-plus bg-orange"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="single-member-content p-1">
+                                        <h5 class="font-weight">John Weible</h5>
+                                        <p class="font-weight color-y">Owner and Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-    public function create()
-    {
-        return view('admin.dashboard');
-    }
-
-    public function about()
-    {
-        return view('about');
-    }
-
-    public function contact()
-    {
-        return view('contact');
-    }
-
-
-    public function contactStore(Request $request)
-    {
-        //
-    }
-
-
-
-    public function store(Request $request)
-    {
-        $data = request()->validate([
-            'name' => 'required|string',
-            'quality' => 'required|string',
-            'image' => 'required|image',
-            'facebook' => 'nullable',
-            'linkedin' => 'nullable',
-            'googleplus' => 'nullable',
-            'twiter' => 'nullable',
-        ]);
-
-        $imagePath = $request->image;
-
-        $fileName = Carbon::now()->timestamp . "imageMembers.jpg";
-        $image = Image::make($imagePath)->resize(500, 400, function($constraint) {
-            $constraint->aspectRatio();
-        });
-
-        $image->save(public_path('storage/uploads'). $fileName);
-
-        //$imageSave =  public_path('storage/uploads/').$fileName;
-
-        //request()->image->move(public_path('storage/uploads'), $fileName);
-
-
-        $teamPosts =auth()->user()->teams()->create([
-            'name' => $data['name'],
-            'quality' => $data['quality'],
-            'facebook' => $data['facebook'],
-            'linkedin' => $data['linkedin'],
-            'googleplus' => $data['googleplus'],
-            'twiter' => $data['twiter'],
-            'image' => $fileName,
-        ]);
-
-        $teamPosts=Teams::all();
-        return view('teamMembers', compact('teamPosts'));
-
-    }
-
-    public function show( User $user)
-    {
-
-    }
-
-
-    public function edit($id)
-    {
-
-    }
-
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-
-    public function destroy($id)
-    {
-        //
-    }
-}
-**/
+    </section>
+</div>	<!-- /container -->

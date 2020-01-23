@@ -17,9 +17,9 @@
                     <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
                         <th>Message</th>
+                        <th>Phone</th>
+                        <th>Email</th>
                         <th>Date</th>
                     </tr>
                     </thead>
@@ -28,9 +28,9 @@
                         @foreach($posts as $post)
                             <tr>
                                 <td>{{$post->name}}</td>
-                                <td><a href="mailto:{{$post->email}}">{{$post->email}}</a></td>
-                                <td>{{$post->phone}}</td>
                                 <td>{{$post->msg}}</td>
+                                <td>{{$post->phone}}</td>
+                                <td>{{$post->email}}</td>
                                 <td>{{$post->created_at->format('d-m-Y')}}</td>
                                 <td><a href="" class="btn btn-info">Delete</a></td>
                             </tr>

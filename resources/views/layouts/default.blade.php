@@ -15,11 +15,13 @@
     {{--    Extrat-js--}}
     @yield('extra-js')
 
+
     <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/owl-carousel.css')}}">
     <link rel="stylesheet" href="{{asset('css/hero-slider.css')}}">
+    @yield( 'team-css')
 {{--    <link rel="stylesheet" href="{{asset('css/templatemo-main.css')}}">--}}
 
 
@@ -30,11 +32,14 @@
     <link rel="stylesheet" href="{{asset('css/notify.css')}}">
 
 
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src=" {{asset('js/html5shiv.js')}} "></script>
     <script src="{{asset('js/respond.min.js')}}"></script>
+
     <![endif]-->
+{{--    <script src="{{asset('js/gallery.js')}}"></script>--}}
 
     <style>
         .navbar-default{background-color:#1E6EE8;}
@@ -58,6 +63,7 @@
                         <ul class="dropdown-menu">
                             <li class="{{set_active_route('dashboard.index')}}"><a href="{{route('dashboard.index')}}">Our team</a></li>
                             <li class="{{set_active_route('dashboard.contact')}}"><a href="{{route('dashboard.contact')}}">Contact</a></li>
+                            <li class="{{set_active_route('galleryIndex')}}"><a href="{{route('gallery')}}">Gallery</a></li>
                         </ul>
                     </li>
 

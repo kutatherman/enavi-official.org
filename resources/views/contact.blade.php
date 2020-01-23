@@ -1,3 +1,18 @@
+<style>
+    .map-container{
+        overflow:hidden;
+        padding-bottom:30.25%;
+        position:relative;
+        height:0;
+    }
+    .map-container iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+</style>
 @extends('layouts.default', ['title' => 'Contact'])
 @section('extra-js')
     {!! NoCaptcha::renderJs() !!}
@@ -16,7 +31,7 @@
 		<div class="row">
 
 			<!-- Article main content -->
-			<article class="col-sm-8 maincontent">
+			<article class="col-sm-12 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">Contact us</h1>
 				</header>
@@ -41,7 +56,7 @@
                                 @enderror
 							</div>
 							<div class="col-sm-4 {{$errors->has('phone') ? 'has-error' : ''}}">
-								<input class="form-control" name="phone" value="{{old('phone')}}" type="text" required placeholder="237 600 00 00 00">
+								<input class="form-control" name="phone" value="{{old('phone')}}" type="text" required placeholder="Phone (237 only) ">
                                 @error('phone')
                                 <span class="help-block" role="alert">{{$message}}</span>
                                 @enderror
@@ -58,7 +73,7 @@
 						</div>
 						<br>
 						<div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-md-6" >
                                 {!! NoCaptcha::display() !!}
                                 @if ($errors->has('g-recaptcha-response'))
                                     <span class="help-block">
@@ -66,8 +81,8 @@
                                     </span>
                                 @endif
                             </div>
-                            <div class="col-sm-6 text-right">
-                                <input class="btn btn-action" type="submit" value="Send message">
+                            <div class="col-md-6  ">
+                                <input class="btn btn-action btn-block" type="submit" value="Send message">
                             </div>
                         </div>
                     </form>
@@ -75,21 +90,29 @@
 			</article>
 			<!-- /Article -->
 
-			<!-- Sidebar -->
-			<aside class="col-sm-4 sidebar sidebar-right">
-                <br>
-                <img src="{{  asset('images/logoENAVI.jpg')}}" alt="">
-
-			</aside>
-			<!-- /Sidebar -->
-
 		</div>
 	</div>	<!-- /container -->
     <br>
     <br>
     <br>
-	<section class="container-full top-space">
-		<div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.3298605254201!2d10.415753483336895!3d5.479595207467001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc83b3b18ee747b96!2sClinique%20de%20la%20Solidarit%C3%A9!5e0!3m2!1sfr!2scm!4v1579489658381!5m2!1sfr!2scm" width="1200" height="453" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
-	</section>
+    <br>
+    <br>
+
+{{--    <div id="map-container-google-1" class="z-depth-1-half map-container " style="height: 200px">--}}
+{{--        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.3298605254201!2d10.415753483336895!3d5.479595207467001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc83b3b18ee747b96!2sClinique%20de%20la%20Solidarit%C3%A9!5e0!3m2!1sfr!2scm!4v1579489658381!5m2!1sfr!2scm" frameborder="0"--}}
+{{--                style="border:0" allowfullscreen></iframe>--}}
+{{--    </div>--}}
+
+    <div class="container-fluid ">
+        <div class="row">
+            <section class="">
+                <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.3298605254201!2d10.415753483336895!3d5.479595207467001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc83b3b18ee747b96!2sClinique%20de%20la%20Solidarit%C3%A9!5e0!3m2!1sfr!2scm!4v1579489658381!5m2!1sfr!2scm" width="100%" height="453" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
+            </section>
+        </div>
+    </div>
+    <!--Google map-->
+
+
+    <!--Google Maps-->
 
 @stop

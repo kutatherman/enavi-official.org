@@ -24,6 +24,7 @@ Route::group([
     Route::get('/home', 'HomeController@index')->name('home');
 
     /** Operation route */
+    Route::post('dashboard/staff','DashboardController@staffStore')->name('staffStore');
     Route::post('dashboard','DashboardController@postStore')->name('postStore');
     Route::get('dashboard/data','DashboardController@getData')->name('getData');
     Route::post('dashboard/delete','DashboardController@postDelete')->name('postDelete');
@@ -36,11 +37,19 @@ Route::group([
     Route::get('dashboard','DashboardController@index');
     Route::get('dashboard/about','DashboardController@about')->name('dashboard.about');
     Route::get('dashboard/index','DashboardController@index')->name('dashboard.index');
+    Route::get('dashboard/index/staff','DashboardController@indexStaff')->name('dashboard.staff');
     Route::get('dashboard/contact','DashboardController@contactCreate')->name('dashboard.contact');
     Route::get('dashboard/contact/show','DashboardController@contactIndex')->name('dashboard.contactIndex');
     Route::get('dashboard/createMember','DashboardController@create')->name('createMember');
+    Route::get('dashboard/createStaff','DashboardController@createStaff')->name('createStaff');
     Route::get('dashboard/{team}','DashboardController@show')->name('dashboard.show');
     Route::get('donate','DashboardController@donate')->name('dashboard.donate');
+
+    /** GALLERIES */
+    Route::get('galleryIndex','DashboardController@galleryIndex')->name('gallery');
+    Route::get('galleryIndex1','DashboardController@galleryIndex1')->name('gallery1');
+    Route::get('galleryIndex3','DashboardController@galleryIndex3')->name('gallery3');
+    Route::get('galleryIndex4','DashboardController@galleryIndex4')->name('gallery4');
 
     /** Contact Posts controller */
    // Route::resource('contactPost', 'ContactPostController');
