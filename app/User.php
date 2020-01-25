@@ -51,4 +51,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Teams::class);
     }
+    public function staffs()
+    {
+        return $this->hasMany(Staff::class);
+    }
 }

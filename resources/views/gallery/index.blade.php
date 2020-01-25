@@ -25,7 +25,7 @@
                 <div class="col-lg-3 col-md-4 col-6">
                     <h3 class=" ">ENAVI CEO and Board Secretary...</h3>
                     <a href="{{route('gallery3')}}" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300" alt="">
+                        <img class="img-fluid img-thumbnail" src="{{asset('images/gallery/secretary/2.jpg')}}" alt="">
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6">

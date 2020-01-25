@@ -26,14 +26,16 @@ class DashboardController extends Controller
 
     public function index()
     {
+        $staffPosts=Staff::all();
         $teamPosts=Teams::all();
-        return view('teamMembers', compact('teamPosts'));
+        return view('teamMembers', compact('teamPosts', 'staffPosts'));
     }
 
     public function indexStaff()
     {
+        $teamPosts=Teams::all();
         $staffPosts=Staff::all();
-        return view('teamMembers', compact('staffPosts'));
+        return view('teamMembers', compact('staffPosts', 'teamPosts'));
     }
 
     public function create()
@@ -81,7 +83,9 @@ class DashboardController extends Controller
         $posts = ContactPost::all();
         return view('contactPost.index', compact('posts'));
     }
+    /** End Contact message */
 
+    /** team */
     public function postStore(Request $request)
     {
 
@@ -93,8 +97,8 @@ class DashboardController extends Controller
             'linkedin' => 'nullable',
             'googleplus' => 'nullable',
             'twiter' => 'nullable',
-            'emailAddress' => 'nullable',
-            'description' => 'nullable',
+            'emailAddress' => 'nullable|email',
+            'description' => 'nullable|min:10',
         ]);
 
         $image = $request->file('image');
@@ -122,7 +126,8 @@ class DashboardController extends Controller
         smilify('success', 'Member create successfully');
 
         $teamPosts=Teams::all();
-        return view('teamMembers', compact('teamPosts'));
+        $staffPosts=Staff::all();
+        return view('teamMembers', compact('teamPosts', 'staffPosts'));
     }
 
     public function staffStore(Request $request)
@@ -136,8 +141,8 @@ class DashboardController extends Controller
             'linkedin' => 'nullable',
             'googleplus' => 'nullable',
             'twiter' => 'nullable',
-            'emailAddress' => 'nullable',
-            'description' => 'nullable',
+            'emailAddress' => 'nullable|email',
+            'description' => 'nullable|min:10',
         ]);
 
         $image = $request->file('image');
@@ -150,7 +155,7 @@ class DashboardController extends Controller
 
         })->save($destinationPath.'/'.$input['imagename']);
 
-        $staffPosts = auth()->user()->teams()->create([
+        $staffPosts = auth()->user()->staffs()->create([
             'name' => $request->name,
             'quality' => $data['quality'],
             'facebook' => $data['facebook'],
@@ -164,14 +169,21 @@ class DashboardController extends Controller
 
         smilify('success', 'Member create successfully');
 
+        $teamPosts=Teams::all();
         $staffPosts=Staff::all();
-        return view('teamMembers', compact('staffPosts'));
+        return view('teamMembers', compact('staffPosts', 'teamPosts'));
     }
 
     public function show($id )
     {
         $showTeam = Teams::findOrFail($id);
         return view('teams.show', compact('showTeam'));
+    }
+
+    public function showStaff($id )
+    {
+        $showStaff = Staff::findOrFail($id);
+        return view('teams.showStaff', compact('showStaff'));
     }
 
     public function postEdit($id)
@@ -236,8 +248,10 @@ class DashboardController extends Controller
         Teams::destroy($id);
         return back();
     }
+    /** End Team */
 
-/** GALLERY FUNCTION */
+
+/** GALLERY */
     public function galleryIndex()
     {
         return view('gallery.index');
@@ -246,7 +260,6 @@ class DashboardController extends Controller
     {
         return view('gallery.CEO-at-Internation-conferences');
     }
-
     public function galleryIndex3()
     {
         return view('gallery.ENAVI_CEO_and_Board_Secretary');
@@ -255,5 +268,6 @@ class DashboardController extends Controller
     {
         return view('gallery.ENAVI_CEO_organises_2019_Commonwealth');
     }
+    /** END GALLERY */
 
 }

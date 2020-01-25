@@ -43,6 +43,7 @@ Route::group([
     Route::get('dashboard/createMember','DashboardController@create')->name('createMember');
     Route::get('dashboard/createStaff','DashboardController@createStaff')->name('createStaff');
     Route::get('dashboard/{team}','DashboardController@show')->name('dashboard.show');
+    Route::get('dashboard/staff/{staff}','DashboardController@showStaff')->name('dashboard.showStaff');
     Route::get('donate','DashboardController@donate')->name('dashboard.donate');
 
     /** GALLERIES */

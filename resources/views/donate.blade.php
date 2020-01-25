@@ -22,15 +22,14 @@
                <!-- Article main content -->
                <article class="col-md-7 maincontent">
                    <header class="page-header">
-                       <h1 class="page-title">Yes! I’d like to change an entire lifetime – by giving the gift of sight.</h1>
+                       <h1 class="page-title">{{__('messages.help01')}}</h1>
                    </header>
                    <p>{{__('messages.help5')}}</p>
                    <p>{{__('messages.help4')}}</p>
-                   <p>But a gift like the one you are about to make changed everything for this family. Their father was able to get them to a newly opened Brien Holden Institute Foundation Vision Centre in Phnom Penh. A simple eye exam and corrective eyeglasses were all it took to change their world. They could now see their beautiful village and smiling faces around them clearly.</p>
+                   <p>{{__('messages.help6')}}</p>
+                   <p>{{__('messages.help7')}}</p>
 
-                   <p>Right now, another child like Somita is in need of an optometrist and your beautiful, life-changing gift: the gift of sight.</p>
-
-                   <p><strong>Optometry Giving Sight Australia has merged with Brien Holden Vision Institute Foundation.  See below for more information.</strong></p>
+                   <p><strong>{{__('messages.help8')}}</strong></p>
 
 
                </article>

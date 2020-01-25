@@ -48,15 +48,14 @@
 								<hr>
 
 								<div class="row">
-									<div class="col-lg-8">
-										<b> @if (Route::has('password.request'))
-                                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                    {{ __('Forgot Your Password?') }}
-                                                </a>
-                                            @endif </b>
-									</div>
-									<div class="col-lg-4 text-right">
-                                        <button type="submit" class="btn btn-action">
+{{--									<div class="col-lg-8">--}}
+{{--										<b> @if (Route::has('password.request'))--}}
+{{--                                                <a class="btn btn-link" href="{{ route('password.request') }}">--}}
+{{--                                                </a>--}}
+{{--                                            @endif </b>--}}
+{{--									</div>--}}
+									<div class="col-lg-12 text-right">
+                                        <button type="submit" class="btn btn-action btn-block">
                                             {{ __('Login') }}
                                         </button>
 									</div>

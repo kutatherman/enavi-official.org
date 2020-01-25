@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Gallery &mdash; Colorlib Website Template</title>
+    <title>Gallery</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -168,6 +168,31 @@
                         </div>
                     </a>
                 </div>
+                <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="{{asset('images/gallery/secretary/14.jpg')}}" class="d-block photo-item" data-fancybox="gallery">
+                        <img src="{{asset('images/gallery/secretary/14.jpg')}}" alt="Image" class="img-fluid">
+                        <div class="photo-text-more">
+                            <span class="icon icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="{{asset('images/gallery/secretary/15.jpg')}}" class="d-block photo-item" data-fancybox="gallery">
+                        <img src="{{asset('images/gallery/secretary/15.jpg')}}" alt="Image" class="img-fluid">
+                        <div class="photo-text-more">
+                            <span class="icon icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="{{asset('images/gallery/secretary/19.jpg')}}" class="d-block photo-item" data-fancybox="gallery">
+                        <img src="{{asset('images/gallery/secretary/19.jpg')}}" alt="Image" class="img-fluid">
+                        <div class="photo-text-more">
+                            <span class="icon icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+
 
             </div>
 
