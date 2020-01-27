@@ -25,4 +25,11 @@ return [
     'help8' => 'ENAVI .... Vue et bien-être pour tous',
     'msgDashboard' => 'Vous n\'avez pas de message pour le moment',
     'bio' => 'Biographie',
+    'question1' => 'Comment fonctionne l\'œil?',
+    'question2' => 'Lorsque vous prenez une photo, l\'objectif à l\'avant de l\'appareil photo laisse passer la lumière et concentre cette lumière sur le film qui recouvre la paroi intérieure arrière de l\'appareil photo. Lorsque la lumière frappe le film, une photo est prise. L\'œil fonctionne de la même manière. Les parties avant de l\'œil (la cornée, la pupille et le cristallin) sont claires et laissent passer la lumière. La lumière passe également à travers le grand espace au centre de l\'œil appelé cavité vitreuse. La cavité vitreuse est remplie d\'une substance transparente semblable à de la gelée appelée gel vitreux ou vitreux. La lumière est focalisée par la cornée et le cristallin sur une fine couche de tissu appelée rétine, qui recouvre la paroi interne arrière de l\'œil. La rétine est comme le film d\'un appareil photo. C\'est le tissu voyant de l\'œil. Lorsque la lumière focalisée frappe la rétine, une photo est prise. Les messages concernant cette image sont envoyés au cerveau via le nerf optique. Voilà comment nous voyons.',
+    'question3' => 'Qu\'est-ce que l\'acuité visuelle?',
+    'question4' => 'L\'acuité est la mesure de la capacité de l\'œil à distinguer la plus petite lettre ou symbole identifiable, ses détails et sa forme, généralement à une distance de 20 pieds. Cette mesure est généralement donnée en fraction. Le nombre supérieur se réfère à la distance d\'essai mesurée en pieds et le nombre inférieur est la distance à partir de laquelle un œil normal devrait voir la lettre ou la forme. La vision parfaite est donc de 20/20. Si votre vision est de 20/60, cela signifie ce que vous pouvez voir à une distance de 20 pieds, quelqu\'un avec une vision parfaite peut voir à une distance de 60 pieds.',
+    'question5' => 'L\'œil rose est-il contagieux?',
+    'question6' => 'Oui, la conjonctivite virale (œil rose) est très courante et extrêmement contagieuse. Évitez de vous toucher les yeux avec vos mains, lavez-vous les mains fréquemment, ne partagez pas les serviettes et évitez le travail, l\'école ou les garderies pendant au moins cinq jours ou tant que la décharge est présente.',
+
 ];

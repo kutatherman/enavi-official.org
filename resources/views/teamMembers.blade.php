@@ -3,13 +3,13 @@
     <header id="head" class="secondary"></header>
 
     <div class="container">
-        <h1 class="font-weight">OUR TEAM</h1>
+        <h1 class="font-weight text-center">OUR TEAM</h1>
         <section id="team" class="team">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-title">
-                            <h2 class="font-weight">BOARD OF DIRECTOR</h2>
+                            <h3 class="font-weight">BOARD OF DIRECTOR</h3>
                             <span class="dots dt-theme margin-bottom-1"></span>
                         </div>
                         <div class="our-team-three">
@@ -69,14 +69,21 @@
             </div>
             @endauth
         </section>
-        <hr>
-        <hr>
+
+        <style>
+            hr.style1{
+                border-top: 1px solid #8c8b8b;
+            }
+        </style>
+
+        <hr class="style1">
+
         <section id="team" class="team">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-title">
-                            <h2 class="font-weight">STAFF</h2>
+                            <h3 class="font-weight">STAFF</h3>
                             <span class="dots dt-theme margin-bottom-1"></span>
                         </div>
                         <div class="our-team-three">

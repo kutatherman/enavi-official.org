@@ -20,6 +20,8 @@ class DashboardController extends Controller
             'galleryIndex2',
             'galleryIndex3',
             'galleryIndex4',
+            'show',
+            'showStaff',
             'about', 'contactCreate', 'contactStore'
         ]);
     }

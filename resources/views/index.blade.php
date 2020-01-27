@@ -25,84 +25,68 @@
 		<p class="">{!! __('messages.sloganSection5') !!}</p>
 		<p class="">{!! __('messages.sloganSection6') !!}</p>
         <p><strong>Dr.Enowntai Nkongho AYUKOTANG, OD (KNUST-Ghana), MPHEC (LSHTM, London-UK), PhD Student(UKZN-South Africa).</strong></p>
-        <p><strong>CEO of ENAVI-OFFICIAL</strong>/p>
+        <p><strong>CEO of ENAVI-OFFICIAL</strong>
 	</div>
 	<!-- /Intro-->
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Welcome video french and english version</h2>
+            <div class="col-md-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WEV5TgUVEAA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uVSNBZQg480" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
-	<!-- Highlights - jumbotron -->
-	<div class="jumbotron top-space">
-		<div class="container">
-
-			<h3 class="text-center thin">EN.AYUKOTANG VISION INSTITUTE</h3>
-
-			<div class="row">
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>some thing here</h4></div>
-					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquid adipisci aspernatur. Soluta quisquam dignissimos earum quasi voluptate. Amet, dignissimos, tenetur vitae dolor quam iusto assumenda hic reprehenderit?</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-flash fa-5"></i>Fat-free</h4></div>
-					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, commodi, sequi quis ad fugit omnis cumque a libero error nesciunt molestiae repellat quos perferendis numquam quibusdam rerum repellendus laboriosam reprehenderit! </p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>Creative Commons</h4></div>
-					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis?</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>Author's support</h4></div>
-					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, excepturi, maiores, dolorem quasi reprehenderit illo accusamus nulla minima repudiandae quas ducimus reiciendis odio sequi atque temporibus facere corporis eos expedita? </p>
-					</div>
-				</div>
-			</div> <!-- /row  -->
-
-		</div>
-	</div>
-	<!-- /Highlights -->
+    <br> <br>
 
 	<!-- container -->
 	<div class="container">
-
-		<h2 class="text-center top-space">{{__('messages.section1')}}</h2>
-		<br>
-
-		<div class="row">
-			<div class="col-sm-6">
-                <h3>{{__('messages.headSection1')}}</h3>
-				<p>{{__('messages.contentSection1')}}</p>
-			</div>
-			<div class="col-sm-6">
-				<h3>How does the eye work?</h3>
-				<p>
-                    When you take a picture, the lens in the front of the camera allows light through and focuses that light on the film that covers the back inside wall of the camera. When the light hits the film, a picture is taken. The eye works in much the same way. The front parts of the eye (the cornea, pupil and lens) are clear and allow light to pass through. The light also passes through the large space in the center of the eye called the vitreous cavity. The vitreous cavity is filled with a clear, jelly-like substance called the vitreous or vitreous gel. The light is focused by the cornea and the lens onto a thin layer of tissue called the retina, which covers the back inside wall of the eye. The retina is like the film in a camera. It is the seeing tissue of the eye. When the focused light hits the retina, a picture is taken. Messages about this picture are sent to the brain through the optic nerve. This is how we see.</p>
-			</div>
-		</div> <!-- /row -->
-
-		<div class="row">
-			<div class="col-sm-6">
-				<h3>What Is visual acuity?</h3>
-				<p>
-                    Acuity is the measure of the eye's ability to distinguish the smallest identifiable letter or symbol, its details and shape, usually at a distance of 20 feet. This measurement is usually given in a fraction. The top number refers to the testing distance measured in feet and the bottom number is the distance from which a normal eye should see the letter or shape. So, perfect vision is 20/20. If your vision is 20/60, that means what you can see at a distance of 20 feet, someone with perfect vision can see at a distance of 60 feet.
-				</p>
-			</div>
-			<div class="col-sm-6">
-				<h3>Is pink-eye contagious?</h3>
-				<p>Yes, viral conjunctivitis (pink-eye) is very common and is extremely contagious. Avoid touching eyes with your hands, wash hands frequently, do not share towels, and avoid work, school or daycare activities for a least five days or as long as discharge is present.</p>
-			</div>
-		</div> <!-- /row -->
-
-{{--		<div class="jumbotron top-space">--}}
-{{--			<h4>Dicta, nostrum nemo soluta sapiente sit dolor quae voluptas quidem doloribus recusandae facere magni ullam suscipit sunt atque rerum eaque iusto facilis esse nam veniam incidunt officia perspiciatis at voluptatibus. Libero, aliquid illum possimus numquam fuga.</h4>--}}
-{{--     		<p class="text-right"><a class="btn btn-primary btn-large">Learn more »</a></p>--}}
-{{--  		</div>--}}
+<h1 class="text-center">question fréquemment posé</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">{{__('messages.headSection1')}}</h3>
+                        <p class="card-text">{{__('messages.contentSection1')}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">{{__('messages.question1')}}</h3>
+                        <p class="card-text">{{__('messages.question2')}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">{{__('messages.question3')}}</h3>
+                    <p class="card-text">{{__('messages.question4')}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">{{__('messages.question5')}}</h3>
+                    <p class="card-text">{{__('messages.question6')}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>	<!-- /container -->
+
+
+
 
 	<!-- Social links. @TODO: replace by link/instructions in template -->
 	<section id="social">

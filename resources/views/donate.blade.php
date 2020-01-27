@@ -41,7 +41,7 @@
 
                    <div class="row widget">
                        <div class="col-xs-12">
-                           <p><img src="{{asset('images/somita.jpg')}}" alt=""></p>
+                           <p><img src="{{asset('images/Donate.jpg')}}" alt=""></p>
                        </div>
                    </div>
                    <br>

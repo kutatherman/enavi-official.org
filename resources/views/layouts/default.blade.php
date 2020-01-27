@@ -89,6 +89,7 @@
                             @auth()
                                     <li class="active"><a href="{{route('register')}}">S'enrégistrer </a></li>
                                     <li class="active"><a href="{{route('createMember')}}">Add member</a></li>
+                                    <li class="active"><a href="{{route('dashboard.contactIndex')}}">Messages</a></li>
                                 @endauth
                                 @auth()
                                 <li><a class="dropdown-item" href="{{ route('logout') }}"
@@ -169,7 +170,7 @@
                     <h3 class="widget-title">Follow</h3>
                     <div class="widget-body">
                         <p class="follow-me-icons">
-                            <a href="E.N. Ayukotang Vision Institute-ENAVI (@e_enavi) | Twitter"><i class="fa fa-twitter fa-2"></i></a>
+                            <a href="https://twitter.com/e_enavi"><i class="fa fa-twitter fa-2"></i></a>
                             <a href="https://www.facebook.com/ENAyukotang-Vision-Institute-enavi-104850491033491/"><i class="fa fa-facebook fa-2"></i></a>
                             <a href="https://www.linkedin.com/company/e-n-ayukotang-vision-institute"><i class="fa fa-linkedin fa-2"></i></a>
                         </p>
