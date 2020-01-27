@@ -27,30 +27,19 @@ return [
 
 
     'accepted'        => 'Le champ :attribute doit être accepté.',
-
     'active_url'      => "Le champ :attribute n'est pas une URL valide.",
-
     'after'           => 'Le champ :attribute doit être une date postérieure au :date.',
-
     'after_or_equal'  => 'Le champ :attribute doit être une date postérieure ou égale au :date.',
-
     'alpha'           => 'Le champ :attribute doit contenir uniquement des lettres.',
-
     'alpha_dash'      => 'Le champ :attribute doit contenir uniquement des lettres, des chiffres et des tirets.',
-
     'alpha_num'       => 'Le champ :attribute doit contenir uniquement des chiffres et des lettres.',
-
     'array'           => 'Le champ :attribute doit être un tableau.',
-
     'before'          => 'Le champ :attribute doit être une date antérieure au :date.',
-
     'before_or_equal' => 'Le champ :attribute doit être une date antérieure ou égale au :date.',
-
     'between'         => [
-
         'numeric' => 'La valeur de :attribute doit être comprise entre :min et :max.',
         'file'    => 'La taille du fichier de :attribute doit être comprise entre :min et :max kilo-octets.',
-        'string'  => 'Le texte :attribute doit contenir entre :min et :max caractères.',
+        'string'  => 'Ce champ doit contenir entre :min et :max caractères.',
         'array'   => 'Le tableau :attribute doit contenir entre :min et :max éléments.',
     ],
     'boolean'        => 'Le champ :attribute doit être vrai ou faux.',
@@ -77,7 +66,7 @@ return [
     'gte' => [
         'numeric' => 'La valeur de :attribute doit être supérieure ou égale à :value.',
         'file'    => 'La taille du fichier de :attribute doit être supérieure ou égale à :value kilo-octets.',
-        'string'  => 'Le texte :attribute doit contenir au moins :value caractères.',
+        'string'  => 'Ce champ doit contenir au moins :value caractères.',
         'array'   => 'Le tableau :attribute doit contenir au moins :value éléments.',
     ],
     'image'    => 'Le champ :attribute doit être une image.',
@@ -91,7 +80,7 @@ return [
     'lt'       => [
         'numeric' => 'La valeur de :attribute doit être inférieure à :value.',
         'file'    => 'La taille du fichier de :attribute doit être inférieure à :value kilo-octets.',
-        'string'  => 'Le texte :attribute doit contenir moins de :value caractères.',
+        'string'  => 'Ce champ doit contenir moins de :value caractères.',
         'array'   => 'Le tableau :attribute doit contenir moins de :value éléments.',
     ],
     'lte' => [
@@ -111,7 +100,7 @@ return [
     'min'       => [
         'numeric' => 'La valeur de :attribute doit être supérieure ou égale à :min.',
         'file'    => 'La taille du fichier de :attribute doit être supérieure à :min kilo-octets.',
-        'string'  => 'Le texte :attribute doit contenir au moins :min caractères.',
+        'string'  => 'Ce champ doit contenir au moins :min caractères.',
         'array'   => 'Le tableau :attribute doit contenir au moins :min éléments.',
     ],
     'not_in'               => "Le champ :attribute sélectionné n'est pas valide.",
@@ -120,7 +109,7 @@ return [
     'password'             => 'Le mot de passe est incorrect',
     'present'              => 'Le champ :attribute doit être présent.',
     'regex'                => 'Le format du champ :attribute est invalide.',
-    'required'             => 'Le champ :attribute est obligatoire.',
+    'required'             => 'Ce champ  est obligatoire.',
     'required_if'          => 'Le champ :attribute est obligatoire quand la valeur de :other est :value.',
     'required_unless'      => 'Le champ :attribute est obligatoire sauf si :other est :values.',
     'required_with'        => 'Le champ :attribute est obligatoire quand :values est présent.',

@@ -184,16 +184,6 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <a href="{{asset('images/gallery/secretary/19.jpg')}}" class="d-block photo-item" data-fancybox="gallery">
-                        <img src="{{asset('images/gallery/secretary/19.jpg')}}" alt="Image" class="img-fluid">
-                        <div class="photo-text-more">
-                            <span class="icon icon-search"></span>
-                        </div>
-                    </a>
-                </div>
-
-
             </div>
 
         </div>

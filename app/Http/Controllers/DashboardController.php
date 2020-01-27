@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\ContactPost;
+use App\Post;
 use App\Staff;
 use App\Teams;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Intervention\Image\Facades\Image;
 
 class DashboardController extends Controller
@@ -65,7 +67,6 @@ class DashboardController extends Controller
     {
         return view('contact');
     }
-
     public function contactStore(Request $request)
     {
         $this->validate($request, [
@@ -79,15 +80,27 @@ class DashboardController extends Controller
         smilify('success', 'Your message has sent successfully');
         return back();
     }
-
     public function contactIndex()
     {
         $posts = ContactPost::all();
         return view('contactPost.index', compact('posts'));
     }
+    public function deleteMsg($id)
+    {
+        ContactPost::destroy($id);
+        smilify('success', 'Messages delete successfully');
+        return back();
+    }
+    public function deleteAllMsg(Request $request)
+    {
+        $ids = $request->get('ids');
+        $dbs = DB::table('contact_posts')->whereIn('id', explode(',', $ids))->delete();
+         smilify('success', 'All messages has successfully deleted');
+        return back();
+    }
     /** End Contact message */
 
-    /** team */
+    /** team*/
     public function postStore(Request $request)
     {
 
