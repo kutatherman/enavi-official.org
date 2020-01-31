@@ -119,7 +119,7 @@
                                                 @auth()
                                                     <div class="d-flex justify-content-between align-items-center">
 {{--                                                        <span><a href="{{route('postEdit', $staff->id)}}" class=" badge btn-primary">Edit Member</a></span>--}}
-                                                        <span><a href="{{route('postDelete', $staff->id )}}" data-method="DELETE" data-confirm="Are you sure ?" class="badge btn-danger">Delete Staff</a></span>
+                                                        <span><a href="{{route('deleteStaff', $staff->id )}}" data-method="DELETE" data-confirm="Are you sure ?" class="badge btn-danger">Delete Staff</a></span>
                                                     </div>
                                                 @endauth
                                             </div>

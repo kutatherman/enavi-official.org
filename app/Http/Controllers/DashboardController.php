@@ -28,20 +28,6 @@ class DashboardController extends Controller
         ]);
     }
 
-    public function index()
-    {
-        $staffPosts=Staff::all();
-        $teamPosts=Teams::all();
-        return view('teamMembers', compact('teamPosts', 'staffPosts'));
-    }
-
-    public function indexStaff()
-    {
-        $teamPosts=Teams::all();
-        $staffPosts=Staff::all();
-        return view('teamMembers', compact('staffPosts', 'teamPosts'));
-    }
-
     public function create()
     {
         return view('admin.dashboard');
@@ -101,6 +87,18 @@ class DashboardController extends Controller
     /** End Contact message */
 
     /** team*/
+    public function indexStaff()
+    {
+        $teamPosts=Teams::all();
+        $staffPosts=Staff::all();
+        return view('teamMembers', compact('staffPosts', 'teamPosts'));
+    }
+    public function index()
+    {
+        $staffPosts=Staff::all();
+        $teamPosts=Teams::all();
+        return view('teamMembers', compact('teamPosts', 'staffPosts'));
+    }
     public function postStore(Request $request)
     {
 
@@ -261,6 +259,11 @@ class DashboardController extends Controller
     public function delete($id)
     {
         Teams::destroy($id);
+        return back();
+    }
+    public function deleteStaff($id)
+    {
+        Staff::destroy($id);
         return back();
     }
     /** End Team */

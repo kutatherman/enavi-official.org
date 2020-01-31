@@ -31,6 +31,7 @@ Route::group([
     Route::get('dashboard/{team}/edit','DashboardController@postEdit')->name('postEdit');
     Route::put('dashboard/{team}','DashboardController@postUpdate')->name('postUpdate');
     Route::delete('dashboard/{team}','DashboardController@delete')->name('postDelete');
+    Route::delete('dashboard/staff/{staff}','DashboardController@deleteStaff')->name('deleteStaff');
     Route::delete('dashboard/contact/{msgDelete}','DashboardController@deleteMsg')->name('msgDelete');
     Route::delete('dashboard/contact/msgDeleteAll','DashboardController@deleteAllMsg')->name('msgDeleteAll');
     Route::post('dashboard/contact','DashboardController@contactStore')->name('contactStore');
