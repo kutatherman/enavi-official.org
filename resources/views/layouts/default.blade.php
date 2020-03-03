@@ -10,7 +10,7 @@
     <title> {{isset($title) ? $title . ' | ' : '' }} {{env('APP_NAME')}}</title>
 
     <link rel="shortcut icon" href="{{asset('images/gt_favicon.png')}}">
-
+    
 
     {{--    Extrat-js--}}
     @yield('extra-js')
@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/owl-carousel.css')}}">
     <link rel="stylesheet" href="{{asset('css/hero-slider.css')}}">
+
+    {{--  DROP ZONE--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/dropzone.min.css">
     @yield( 'team-css')
 {{--    <link rel="stylesheet" href="{{asset('css/templatemo-main.css')}}">--}}
 
@@ -221,8 +224,8 @@
 <script src="{{asset('js/notify.js')}}"></script>
 <script src="{{asset('js/larails.js')}}"></script>
 
-
-
+{{-- DROP ZONE --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/dropzone.min.js"></script>
 
 </div>
 </body>
